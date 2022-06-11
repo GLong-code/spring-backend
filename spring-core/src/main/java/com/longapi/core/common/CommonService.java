@@ -1,6 +1,7 @@
 package com.longapi.core.common;
 
-import javax.persistence.Id;
+import com.longapi.core.dto.OrderBy;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,8 @@ public interface CommonService<T,ID> {
     T findById(ID id);
 
     List<T> findAll();
+
+    List<T> findAllandSort(List<OrderBy> order);
 
     T insert(T object);
 

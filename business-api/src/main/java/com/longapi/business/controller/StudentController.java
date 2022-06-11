@@ -10,10 +10,10 @@ import com.longapi.core.utils.LogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Map;
+
+//import org.springframework.security.access.prepost.PreAuthorize;
 
 
 @RequestMapping("/Student")
@@ -24,7 +24,7 @@ public class StudentController extends CommonController<Student, Integer> {
     @Autowired
     StudentService studentService;
 
-    @PreAuthorize("@appAuthorizer.authorize(authentication, '" + CoreConstants.PRIVILEGE.VIEW + "', this)")
+//    @PreAuthorize("@appAuthorizer.authorize(authentication, '" + CoreConstants.PRIVILEGE.VIEW + "', this)")
     @RequestMapping(value = { "/findByName" }, method = RequestMethod.POST)
     public @ResponseBody
     ResponseEntity<?> findByName(@RequestBody Map map){

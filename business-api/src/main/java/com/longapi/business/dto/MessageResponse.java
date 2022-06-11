@@ -15,8 +15,6 @@ public class MessageResponse<T> {
         String SYSTEM_ERROR = "500";
     }
 
-
-
     private String code;
     private String[] paramCode;
     private String message;

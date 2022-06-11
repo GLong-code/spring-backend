@@ -1,7 +1,10 @@
 package com.longapi.core.common.Impl;
 
 import com.longapi.core.common.CommonService;
+import com.longapi.core.dto.OrderBy;
+import com.longapi.core.utils.SortUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,9 +29,20 @@ public class CommonServiceImpl<T,ID extends Serializable> implements CommonServi
         return jpaRepository.findById(id).orElse(null);
     }
 
+
     @Override
     public List<T> findAll() {
         return jpaRepository.findAll();
+    }
+
+    @Override
+    public List<T> findAllandSort(List<OrderBy> order) {
+        if (order.isEmpty()){
+            return findAll();
+        }
+        else {
+            return jpaRepository.findAll(Sort.by(SortUtil.orders(order)));
+        }
     }
 
     @Override

@@ -24,7 +24,7 @@ public class MessageResponse<T> {
     private T data;
 
     public MessageResponse() {
-        this.code = ERROR_CODE.SYSTEM_ERROR;
+        this.code = ERROR_CODE.SUCCESS;
         this.status = RESPONSE_STATUS.SUCCESS;
     }
 
