@@ -3,10 +3,11 @@ package com.longapi.business.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Collections;
 
 
 @Data
-@Entity
+@Entity(name = "student")
 @Getter
 @Setter
 @AllArgsConstructor   // Tao Constructor day du thuoc tinh
@@ -28,5 +29,11 @@ public class Student {
     @Column(name = "gender")
     private String gender;
 
+    @Column(name = "idClass")
+    private Integer idClass;
+
+    @ManyToOne
+    @JoinColumn(name = "idClass", insertable = false, updatable = false)
+    private ClassRoom classRoom;
 
 }
