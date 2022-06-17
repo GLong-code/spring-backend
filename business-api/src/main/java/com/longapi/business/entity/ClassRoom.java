@@ -22,7 +22,8 @@ public class ClassRoom {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "classRoom" , cascade = CascadeType.ALL)
-    private Collection<Student> students;
+
+//    @OneToMany(mappedBy = "classRoom" , cascade = CascadeType.ALL)
+//    private Collection<Student> students;
 
 }

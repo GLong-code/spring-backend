@@ -27,6 +27,5 @@ public class BusinessApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
     }
 
-
 }
 

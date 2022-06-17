@@ -32,8 +32,9 @@ public class Student {
     @Column(name = "idClass")
     private Integer idClass;
 
-    @ManyToOne
-    @JoinColumn(name = "idClass", insertable = false, updatable = false)
-    private ClassRoom classRoom;
+//    @ManyToOne
+//    @JoinColumn(name = "idClass", insertable = false, updatable = false)
+//    private ClassRoom classRoom;
+
 
 }
