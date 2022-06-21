@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface ClassroomDao extends CommonDao<ClassRoom,Integer>{
-
     List<ClassRoom> findByName(Map map);
 
 }
