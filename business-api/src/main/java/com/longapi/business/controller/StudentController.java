@@ -47,4 +47,24 @@ public class StudentController extends CommonController<Student, Integer> {
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }
 
+    @RequestMapping(value = {"/findStudentByClass"}, method = RequestMethod.POST)
+    public @ResponseBody
+    ResponseEntity<?> findStudentByClass(@RequestBody Map map){
+        long startTime = System.currentTimeMillis();
+        LogUtil.showLog(logger, LogUtil.LOG_BEGIN, "findStudentByClass", startTime);
+        MessageResponse msg = new MessageResponse();
+
+        try {
+            msg.setData(studentService.findStudentByClass(map));
+        }
+        catch (Exception ex){
+            logger.error(ex.getMessage(), ex);
+            throw ex;
+        }
+        finally {
+            LogUtil.showLog(logger, LogUtil.LOG_END, "findStudentByClass", startTime);
+        }
+        return new ResponseEntity<>(msg,HttpStatus.OK);
+    }
+
 }

@@ -10,4 +10,6 @@ public interface StudentDao extends CommonDao<Student, Integer> {
 
     List<Student> findByName(Map map);
 
+    List<Student> findStudentByClass(Map map);
+
 }

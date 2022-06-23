@@ -4,7 +4,6 @@ import com.longapi.business.dao.ClassroomDao;
 import com.longapi.business.entity.ClassRoom;
 import com.longapi.business.entity.Student;
 import com.longapi.core.common.Impl.CommonDaoImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Map;

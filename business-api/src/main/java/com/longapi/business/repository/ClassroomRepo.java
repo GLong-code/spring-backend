@@ -11,3 +11,4 @@ import java.util.Map;
 @Repository
 public interface ClassroomRepo extends JpaRepository<ClassRoom,Integer>, ClassroomDao {
 }
+

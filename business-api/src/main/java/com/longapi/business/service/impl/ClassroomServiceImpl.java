@@ -17,4 +17,6 @@ public class ClassroomServiceImpl extends CommonServiceImpl<ClassRoom, Integer> 
     public List<ClassRoom> findByName(Map map){
         return ((ClassroomRepo) getRepository()).findByName(map);
     }
+
+
 }

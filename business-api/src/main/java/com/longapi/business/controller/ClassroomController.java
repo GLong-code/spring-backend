@@ -34,6 +34,7 @@ public class ClassroomController extends CommonController<ClassRoom, Integer>{
         try {
             msg.setData(classroomService.findByName(map));
         }
+
         catch (Exception ex){
             logger.error(ex.getMessage(), ex);
             throw ex;

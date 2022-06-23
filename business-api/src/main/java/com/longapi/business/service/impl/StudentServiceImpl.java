@@ -18,4 +18,8 @@ public class StudentServiceImpl extends CommonServiceImpl<Student, Integer> impl
         return ((StudentRepo) getRepository()).findByName(map);
     }
 
+    public List<Student> findStudentByClass(Map map){
+        return  ((StudentRepo) getRepository()).findStudentByClass(map);
+    }
+
 }

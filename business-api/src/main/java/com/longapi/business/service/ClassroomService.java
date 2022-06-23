@@ -10,4 +10,5 @@ import java.util.Map;
 public interface ClassroomService extends CommonService<ClassRoom, Integer>{
 
     List<ClassRoom> findByName(Map map);
+
 }
